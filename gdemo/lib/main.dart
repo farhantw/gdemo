@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:gdemo/constant/g_color.dart';
+import 'package:gdemo/screens/post_and_comment.dart';
 import 'package:gdemo/screens/ref_and_earn.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +33,8 @@ class MyApp extends StatelessWidget {
       ).copyWith(
         scaffoldBackgroundColor: G1Colors.backgroundcolor,
       ),
-      home: const ReferendEarn(),
+      // home: const ReferendEarn(),
+      home: const PostandComment(),
     );
   }
 }
