@@ -23,6 +23,13 @@ class G1Styles {
           blurRadius: 9.0,
         ),
       ]);
+  static var ratingboxdecoration = BoxDecoration(
+    border: Border.all(
+      width: 0.2,
+      color: G1Colors.sharebuttoncolor,
+    ),
+    borderRadius: BorderRadius.circular(10.0),
+  );
   static var contentdecorationbox = BoxDecoration(
     border: Border.all(
       width: 0.2,
