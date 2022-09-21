@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gdemo/constant/g_color.dart';
 import 'package:gdemo/constant/g_styles.dart';
-import 'package:gdemo/screens/ticket%20traveled/ticket_traveled_controller.dart';
-import 'package:gdemo/screens/ticket%20traveled/widgets/custom_star_rating_widget.dart';
+import 'package:gdemo/screens/ticket%20traveled/widgets/custom_rating_list_widget.dart';
 import 'package:gdemo/widgets/container_widget.dart';
-
 import '../../constant/g_strings.dart';
 
 class TicketTraveledScreen extends StatefulWidget {
@@ -27,131 +26,69 @@ class _TicketTraveledScreenState extends State<TicketTraveledScreen> {
                 context: context,
                 builder: (BuildContext context) {
                   return StatefulBuilder(
-                    builder: (BuildContext context, setState) => Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text("Feedback"),
-                            Icon(Icons.clear_rounded)
-                          ],
-                        ),
-                        Text(
-                            "We hope you've had a pleasant journey. How did you feel?"),
-                        Row(
-                          children: [
-                            InkWell(
-                              onTap: (() {
-                                setState(() {
-                                  TicketTraveledController.getcryingface();
-                                });
-                              }),
-                              child: CustomStarRatingWidget(
-                                rationgIcon:
-                                    TicketTraveledController.cryingfacebool
-                                        ? Text(
-                                            "\u{1F622}", //crying face
-                                            style: TextStyle(fontSize: 25),
-                                          )
-                                        : Icon(Icons.star_border),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            InkWell(
-                              onTap: (() {
-                                setState(() {
-                                  TicketTraveledController
-                                      .getslightlyfrowningface();
-                                });
-                              }),
-                              child: CustomStarRatingWidget(
-                                rationgIcon: TicketTraveledController
-                                        .slightlyfrowningfacebool
-                                    ? Text(
-                                        "\u{1F641}", //slightly frowning face
-                                        style: TextStyle(fontSize: 25),
-                                      )
-                                    : Icon(Icons.star_border),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            InkWell(
-                              onTap: (() {
-                                setState(() {
-                                  TicketTraveledController.getneutralface();
-                                });
-                              }),
-                              child: CustomStarRatingWidget(
-                                rationgIcon:
-                                    TicketTraveledController.neutralfacebool
-                                        ? Text(
-                                            "\u{1F610}", //neutral face
-                                            style: TextStyle(fontSize: 25),
-                                          )
-                                        : Icon(Icons.star_border),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            InkWell(
-                              onTap: (() {
-                                setState(() {
-                                  TicketTraveledController
-                                      .getslightlysmilingface();
-                                });
-                              }),
-                              child: CustomStarRatingWidget(
-                                rationgIcon: TicketTraveledController
-                                        .slightlysmilingfacebool
-                                    ? Text(
-                                        "\u{1F642}", //slightly smiling face
-                                        style: TextStyle(fontSize: 25),
-                                      )
-                                    : Icon(Icons.star_border),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10.0,
-                            ),
-                            InkWell(
-                              onTap: (() {
-                                setState(() {
-                                  TicketTraveledController.getgrinningface();
-                                });
-                              }),
-                              child: CustomStarRatingWidget(
-                                rationgIcon:
-                                    TicketTraveledController.grinningfacebool
-                                        ? Text(
-                                            "\u{1F600}", //grinning face
-                                            style: TextStyle(fontSize: 25),
-                                          )
-                                        : Icon(Icons.star_border),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Spacer(),
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Text(
-                            G1String.submit,
-                            style: G1Styles.fontWeight600FontSize14,
+                    builder: (BuildContext context, setState) => Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 15.0,
                           ),
-                          style: ElevatedButton.styleFrom(
-                            minimumSize: const Size(double.infinity, 42),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                G1String.feedback,
+                                style: G1Styles.fontWeight600FontSize17,
+                              ),
+                              Icon(
+                                Icons.clear_rounded,
+                                size: 20.0,
+                                color: G1Colors.primaryColorMat,
+                              )
+                            ],
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(top: 16.0, bottom: 9.0),
+                            child: Text(G1String.journeymessage),
+                          ),
+                          CustomRatingListWidget(),
+                          TextField(),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 15.0),
+                            child: Text(
+                              G1String.uploadimage,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black54,
+                                  fontSize: 9.0),
+                            ),
+                          ),
+                          Container(
+                              width: 100,
+                              height: 100,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.add),
+                                  Text(G1String.addimage)
+                                ],
+                              ),
+                              decoration: BoxDecoration(border: Border.all())),
+                          Spacer(),
+                          ElevatedButton(
+                              onPressed: () {},
+                              child: Text(
+                                G1String.submit,
+                                style: G1Styles.elevetedbuttonfontstyle,
+                              ),
+                              style: G1Styles.buttonstyle),
+                        ],
+                      ),
                     ),
                   );
                 },
-                // shape: G1Styles.bottomsheetshap,
               );
             }),
             child: ContainerWidget(

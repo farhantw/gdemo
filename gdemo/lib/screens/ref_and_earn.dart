@@ -55,7 +55,7 @@ class ReferendEarn extends StatelessWidget {
                           Spacer(),
                           Text(
                             G1String.refercode,
-                            style: G1Styles.fontWeight600FontSize19,
+                            style: G1Styles.fontWeight600FontSize17,
                           ),
                           Expanded(
                               child: Align(
@@ -92,7 +92,7 @@ class ReferendEarn extends StatelessWidget {
                         ),
                         Text(
                           G1String.myEarnings,
-                          style: G1Styles.fontWeight600FontSize19,
+                          style: G1Styles.fontWeight600FontSize17,
                         )
                       ],
                     ),
@@ -108,7 +108,7 @@ class ReferendEarn extends StatelessWidget {
                 padding: EdgeInsets.only(top: 12.0, bottom: 6.0),
                 child: Text(
                   G1String.howitworks,
-                  style: G1Styles.fontWeight600FontSize19,
+                  style: G1Styles.fontWeight600FontSize17,
                 ),
               ),
               const ListviewWidget(),
