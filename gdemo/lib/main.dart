@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gdemo/constant/g_color.dart';
+import 'package:gdemo/screens/home_screen.dart';
 import 'package:gdemo/screens/post_and_comment.dart';
 import 'package:gdemo/screens/ref_and_earn.dart';
 import 'package:gdemo/screens/ticket%20traveled/ticket_traveled_screen.dart';
@@ -36,7 +37,8 @@ class _MyAppState extends State<MyApp> {
       ),
       // home: const ReferendEarn(),
       // home: const PostandComment(),
-      home: const TicketTraveledScreen(),
+      // home: const TicketTraveledScreen(),
+      home: const HomeScreen(),
     );
   }
 }
