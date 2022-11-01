@@ -32,6 +32,7 @@ dependencies:
     sdk: flutter
   http: ^0.13.5
   percent_indicator: ^4.2.2
+  square_percent_indicater: ^0.1.0
 
 dev_dependencies:
   flutter_lints: ^1.0.0

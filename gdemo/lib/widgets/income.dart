@@ -17,7 +17,7 @@ class Income extends StatelessWidget {
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
             backgroundColor: Colors.orange,
@@ -28,32 +28,32 @@ class Income extends StatelessWidget {
             radius: 28.0,
           ),
           SizedBox(
-            width: 13.0,
+            width: 6.0,
           ),
-          Container(
-            color: Colors.red,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 9.0),
+                child: Text(
                   "Income",
                   style: TextStyle(fontSize: 15, color: Colors.white70),
                 ),
-                SizedBox(
-                  height: 12.0,
-                ),
-                LinearPercentIndicator(
-                  width: MediaQuery.of(context).size.width - 200,
-                  animation: true,
-                  lineHeight: 6.0,
-                  barRadius: Radius.circular(10.0),
-                  animationDuration: 2500,
-                  percent: 0.8,
-                  progressColor: Colors.orange,
-                ),
-              ],
-            ),
+              ),
+              SizedBox(
+                height: 12.0,
+              ),
+              LinearPercentIndicator(
+                width: MediaQuery.of(context).size.width - 200,
+                animation: true,
+                lineHeight: 6.0,
+                barRadius: Radius.circular(10.0),
+                animationDuration: 1000,
+                percent: 0.8,
+                progressColor: Colors.orange,
+              ),
+            ],
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +61,10 @@ class Income extends StatelessWidget {
             children: [
               Text(
                 '+\u002465,658',
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: TextStyle(fontSize: 15, color: Colors.white),
+              ),
+              SizedBox(
+                height: 9.0,
               ),
               Text(
                 "84%",
