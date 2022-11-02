@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gdemo/constant/g_color.dart';
+import 'package:gdemo/constant/g_strings.dart';
+import 'package:gdemo/constant/g_styles.dart';
 import 'package:gdemo/widgets/container_widget.dart';
 
 class TaskCompletedWidget extends StatelessWidget {
@@ -7,82 +10,58 @@ class TaskCompletedWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerWidget(
-      height: 200,
-      width: 200,
-      dbox: BoxDecoration(
-        color: Color.fromARGB(255, 41, 39, 39),
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Container(
-        height: 180,
-        width: 180,
-        // change padding value to modify width of border
-        padding: EdgeInsets.all(4.0),
-
-        child: Container(
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 41, 39, 39),
-            borderRadius: BorderRadius.circular(15),
-          ),
-          child: Column(children: [
-            Container(
-              color: Colors.red,
-              width: 50.0,
-              height: 50.0,
-              child: Stack(
+      height: 145,
+      width: 145,
+      dbox: G1Styles.complettaskcontainerdeco,
+      child: ContainerWidget(
+          height: 130,
+          width: 130,
+          // change padding value to modify width of border
+          padding: EdgeInsets.all(2.8),
+          child: ContainerWidget(
+            padding: EdgeInsets.only(top: 20.0, left: 16.0),
+            dbox: G1Styles.complettaskcontainerdeco,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Positioned(
-                    child: ContainerWidget(
-                      height: 20,
-                      width: 20,
-                      dbox: BoxDecoration(
-                        border: Border.all(
-                          width: 1,
-                          color: Colors.blue,
+                  ContainerWidget(
+                    width: 100,
+                    height: 30,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 6,
+                          child: ContainerWidget(
+                              height: 15,
+                              width: 15,
+                              dbox: G1Styles.completetaskstackcontainerdeco),
                         ),
-                        color: Color.fromARGB(255, 41, 39, 39),
-                        borderRadius: BorderRadius.circular(3),
-                      ),
+                        Positioned(
+                          top: 6.0,
+                          child: ContainerWidget(
+                            height: 15,
+                            width: 15,
+                            dbox: G1Styles.completetaskstackcontainerdeco,
+                            child: Center(
+                              child: Icon(Icons.check,
+                                  size: 11.0, color: G1Colors.theamcolor),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  Positioned(
-                    // top: 5.0,
-                    // right: 5,
-                    child: ContainerWidget(
-                      height: 20,
-                      width: 20,
-                      dbox: BoxDecoration(
-                        border: Border.all(
-                          width: 1,
-                          color: Color.fromARGB(255, 17, 224, 207),
-                        ),
-                        color: Color.fromARGB(255, 41, 39, 39),
-                        borderRadius: BorderRadius.circular(3),
-                      ),
-                    ),
+                  Text(G1String.completetasknumber,
+                      style: G1Styles.fontWeight600FontSize22),
+                  SizedBox(
+                    height: 10.0,
                   ),
-                ],
-              ),
-            ),
-            Text("25"),
-            Text("Completed\nTask")
-          ]),
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 17, 224, 207),
-              Color.fromARGB(255, 41, 39, 39),
-              Color.fromARGB(255, 41, 39, 39),
-              Color.fromARGB(255, 17, 224, 207),
-            ],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            stops: [0.65, 0.2, 0.99, 0.3],
+                  Text(G1String.completetaskstring,
+                      style: G1Styles.fontWeight400FontSize15)
+                ]),
           ),
-        ),
-      ),
+          dbox: G1Styles.LinearGradientcomplettask),
     );
   }
 }

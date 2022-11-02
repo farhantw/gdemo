@@ -13,6 +13,18 @@ class G1String {
   static const String uploadimage = 'Upload Image';
   static const String addimage = 'Add Image';
   static const String feedback = 'Feedback';
+  static const String yesterdaynumber = '+12%';
+  static const String fromyesterday = 'From Yesterday';
+  static const String completetasknumber = '25';
+  static const String completetaskstring = 'Completed\nTask';
+  static const String incomestring = 'Income';
+  static const String incomepercentstring = '84%';
+  static const String incomenumstring = '+\u002465,658';
+  static const String order = 'Orders';
+  static const String totalorder = 'Total Order Today';
+  static const String totalnumberorder = '1000';
+  static const String totalnumberorderparsent = '80.0%';
+
   static const String cryingfacemessage =
       "That bad? We're terribly sorry. We need to fix it asap, please tell us:";
   static const String slightlyfrowningfacemessage =

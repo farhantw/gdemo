@@ -22,4 +22,9 @@ class G1Colors {
   static const Color colorWhite = Color(0xFFFFFFFF);
   static const Color colorBlack = Color(0xFF000000);
   static const Color sharebuttoncolor = Color.fromARGB(255, 89, 87, 87);
+
+  static const Color white24 = Colors.white24;
+  static const Color theamcolor = Color.fromARGB(255, 17, 224, 207);
+  static const Color backgroundwidgetcolor = Color.fromARGB(255, 41, 39, 39);
+  static const Color orangecolor = Colors.orange;
 }

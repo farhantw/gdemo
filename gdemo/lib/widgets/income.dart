@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gdemo/constant/g_color.dart';
+import 'package:gdemo/constant/g_strings.dart';
+import 'package:gdemo/constant/g_styles.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'container_widget.dart';
@@ -11,16 +14,13 @@ class Income extends StatelessWidget {
     return ContainerWidget(
       width: MediaQuery.of(context).size.width * 0.95,
       height: MediaQuery.of(context).size.height * 0.1,
-      dbox: BoxDecoration(
-        color: Color.fromARGB(255, 41, 39, 39),
-        borderRadius: BorderRadius.circular(26),
-      ),
+      dbox: G1Styles.incomeparentcontainerdeco,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
-            backgroundColor: Colors.orange,
+            backgroundColor: G1Colors.orangecolor,
             child: Icon(
               Icons.cloud_download_outlined,
               color: Colors.white,
@@ -36,10 +36,8 @@ class Income extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 9.0),
-                child: Text(
-                  "Income",
-                  style: TextStyle(fontSize: 15, color: Colors.white70),
-                ),
+                child: Text(G1String.incomestring,
+                    style: G1Styles.fontSize15white70),
               ),
               SizedBox(
                 height: 12.0,
@@ -51,7 +49,7 @@ class Income extends StatelessWidget {
                 barRadius: Radius.circular(10.0),
                 animationDuration: 1000,
                 percent: 0.8,
-                progressColor: Colors.orange,
+                progressColor: G1Colors.orangecolor,
               ),
             ],
           ),
@@ -59,16 +57,13 @@ class Income extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(
-                '+\u002465,658',
-                style: TextStyle(fontSize: 15, color: Colors.white),
-              ),
+              Text(G1String.incomenumstring, style: G1Styles.fontSize15white),
               SizedBox(
                 height: 9.0,
               ),
               Text(
-                "84%",
-                style: TextStyle(color: Colors.white30),
+                G1String.incomepercentstring,
+                style: G1Styles.stylewhite30,
               )
             ],
           )

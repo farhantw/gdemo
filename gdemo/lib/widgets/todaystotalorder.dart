@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gdemo/constant/g_color.dart';
+import 'package:gdemo/constant/g_strings.dart';
+import 'package:gdemo/constant/g_styles.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import 'container_widget.dart';
@@ -11,10 +14,7 @@ class TodaysTotalOrder extends StatelessWidget {
     return ContainerWidget(
       width: MediaQuery.of(context).size.width * 0.6,
       height: MediaQuery.of(context).size.height * 0.15,
-      dbox: BoxDecoration(
-        color: Color.fromARGB(255, 41, 39, 39),
-        borderRadius: BorderRadius.circular(26),
-      ),
+      dbox: G1Styles.incomeparentcontainerdeco,
       child: Align(
         alignment: Alignment.bottomCenter,
         child: Padding(
@@ -28,28 +28,15 @@ class TodaysTotalOrder extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Orders",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.w600),
+                    G1String.order,
+                    style: G1Styles.fontWeight600FontSize15,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 6.0, bottom: 8.0),
-                    child: Text(
-                      "Total Order Today",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 28, 26, 26),
-                          fontWeight: FontWeight.w700,
-                          fontSize: 10.0),
-                    ),
+                    child: Text(G1String.totalorder,
+                        style: G1Styles.fontWeight700FontSize10),
                   ),
-                  Text(
-                    "1000",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 45, 211, 211),
-                        fontSize: 20.0),
-                  ),
+                  Text(G1String.totalnumberorder, style: G1Styles.fontSize20),
                 ],
               ),
               SizedBox(
@@ -64,23 +51,17 @@ class TodaysTotalOrder extends StatelessWidget {
                   backgroundColor: Colors.black,
                   percent: 0.80,
                   center: new Text(
-                    "80.0%",
-                    style: new TextStyle(
-                        color: Color.fromARGB(255, 45, 211, 211),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 10.0),
+                    G1String.totalnumberorderparsent,
+                    style: G1Styles.fontWeightboldFontSize10,
                   ),
                   circularStrokeCap: CircularStrokeCap.round,
-                  progressColor: Color.fromARGB(255, 45, 211, 211),
+                  progressColor: G1Colors.theamcolor,
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 15.0),
-                child: Icon(
-                  Icons.call_made_rounded,
-                  size: 20.0,
-                  color: Color.fromARGB(255, 45, 211, 211),
-                ),
+                child: Icon(Icons.call_made_rounded,
+                    size: 20.0, color: G1Colors.theamcolor),
               )
             ],
           ),
