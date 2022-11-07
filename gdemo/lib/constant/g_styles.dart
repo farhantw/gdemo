@@ -19,8 +19,13 @@ class G1Styles {
       fontSize: 10.0);
   static const elevetedbuttonfontstyle = TextStyle(
       color: G1Colors.colorWhite, fontWeight: FontWeight.w500, fontSize: 12);
+  static const signinsignupfontstyle =
+      TextStyle(color: G1Colors.colorWhite, fontSize: 16);
   static const fontWeight600FontSize17 = TextStyle(
-      color: G1Colors.colorBlack, fontWeight: FontWeight.w600, fontSize: 17);
+    color: G1Colors.colorBlack,
+    // fontWeight: FontWeight.w600,
+    fontSize: 24,
+  );
   static const fontSize20 =
       TextStyle(color: G1Colors.theamcolor, fontSize: 20.0);
   static const fontWeight500FontSize18 = TextStyle(
@@ -53,9 +58,9 @@ class G1Styles {
         ),
       ]);
   static var buttonstyle = ElevatedButton.styleFrom(
-      minimumSize: const Size(double.infinity, 35),
+      minimumSize: const Size(double.infinity, 50),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(1.0),
+        borderRadius: BorderRadius.circular(6.0),
       ));
   static var unselectratingboxdecoration = BoxDecoration(
     border: Border.all(

@@ -10,9 +10,13 @@ class G1String {
   static const String post = 'post';
   static const String commentbox = 'Comment Box';
   static const String submit = 'Submit';
+  static const String signinusingpass = 'Sign in using password';
+  static const String sendotp = 'Send OTP';
   static const String uploadimage = 'Upload Image';
   static const String addimage = 'Add Image';
   static const String feedback = 'Feedback';
+  static const String signinsignup = 'Sign In / Sign Up';
+  static const String verify = 'Verify';
   static const String yesterdaynumber = '+12%';
   static const String fromyesterday = 'From Yesterday';
   static const String completetasknumber = '25';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class G1Colors {
-  static const Color primaryColor = Color(0xffFE7A36);
+  static const Color primaryColor = Color.fromARGB(255, 255, 75, 15);
   static const MaterialColor primaryColorMat = MaterialColor(
     0xffFE7A36,
     {

@@ -3,6 +3,7 @@ import 'package:gdemo/constant/g_color.dart';
 import 'package:gdemo/screens/home_screen.dart';
 import 'package:gdemo/screens/post_and_comment.dart';
 import 'package:gdemo/screens/ref_and_earn.dart';
+import 'package:gdemo/screens/signin%20signup/signin_signup_screen.dart';
 import 'package:gdemo/screens/ticket%20traveled/ticket_traveled_screen.dart';
 
 void main() {
@@ -30,15 +31,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'gDemo',
-      theme: ThemeData(
-        primarySwatch: G1Colors.primaryColorMat,
-      ).copyWith(
+      theme: ThemeData(primarySwatch: G1Colors.primaryColorMat).copyWith(
         scaffoldBackgroundColor: G1Colors.backgroundcolor,
       ),
       // home: const ReferendEarn(),
       // home: const PostandComment(),
       // home: const TicketTraveledScreen(),
-      home: const HomeScreen(),
+      home: const SigninSignupScreen(),
+      // home: const HomeScreen(),
     );
   }
 }
