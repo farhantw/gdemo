@@ -25,6 +25,13 @@ class G1String {
   static const String incomepercentstring = '84%';
   static const String incomenumstring = '+\u002465,658';
   static const String order = 'Orders';
+  static const String or = 'OR';
+  static const String usephone = 'Use Phone';
+  static const String useemail = 'Use Email';
+  static const String offer = 'Flat 10% off on first booking';
+  static const String reward = 'Exclusive rewardson every booking';
+  static const String tripmanagement = 'Smart trip management';
+
   static const String totalorder = 'Total Order Today';
   static const String totalnumberorder = '1000';
   static const String totalnumberorderparsent = '80.0%';
