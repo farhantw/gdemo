@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../constant/g_strings.dart';
 import '../../constant/g_styles.dart';
 import '../../widgets/container_widget.dart';
+import '../../widgets/elevatedbuttonwidget.dart';
 
 class SigninSignupScreen extends StatefulWidget {
   const SigninSignupScreen({Key? key}) : super(key: key);
@@ -221,6 +222,9 @@ class _SigninSignupScreenState extends State<SigninSignupScreen> {
                                                       height: double.infinity,
                                                       width: 80.0,
                                                       decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(12),
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -370,19 +374,9 @@ class _SigninSignupScreenState extends State<SigninSignupScreen> {
                                         ),
                                         Text("Send OTP"),
                                         Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 12.0, bottom: 12.0),
-                                          child: ElevatedButton(
-                                              onPressed: () {},
-                                              child: Text(
-                                                G1String.verify,
-                                                style: GoogleFonts.lato(
-                                                  textStyle: G1Styles
-                                                      .signinsignupfontstyle,
-                                                ),
-                                              ),
-                                              style: G1Styles.buttonstyle),
-                                        ),
+                                            padding: const EdgeInsets.only(
+                                                top: 12.0, bottom: 12.0),
+                                            child: ElevatedButtonWidget()),
                                       ],
                                     )
                             ],
